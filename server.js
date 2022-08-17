@@ -16,11 +16,11 @@ import { connectSync, connectDB } from './helpers/dbConnect.js';
 
 const server = express();
 
+server.use(cors()); // version 0 : enabling sharing with other servers
 //loading environment variables
 dotenv.config();
 
 // using the middelwares
-server.use(cors()); // version 0 : enabling sharing with other servers
 server.use(express.json()); // accessing the request body 
 
 // using the routes
