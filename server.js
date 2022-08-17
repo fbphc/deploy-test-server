@@ -33,7 +33,10 @@ server.use(express.json()); // accessing the request body
     // story routes
     server.use('/story', storyRouter);
 
-
+server.use((req,res, next)=>{
+console.log(req.method,req.url, "test")
+    next();
+})
  // connecting to our db
     // connecting syncronesslly
     // connectSync(); : bad practise
