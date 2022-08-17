@@ -33,9 +33,9 @@ server.use(express.json()); // accessing the request body
     // story routes
     server.use('/story', storyRouter);
 
-server.use((req,res, next)=>{
-console.log(req.method,req.url, "test")
-    next();
+server.get("/", (req,res)=>{
+res.json("daje")
+
 })
  // connecting to our db
     // connecting syncronesslly
