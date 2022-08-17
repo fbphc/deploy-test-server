@@ -15,8 +15,8 @@ import storyRouter from './routes/storyRouter.js';
 import { connectSync, connectDB } from './helpers/dbConnect.js';
 
 const server = express();
-
-server.use(cors()); // version 0 : enabling sharing with other servers
+app.use(cors({ origin: process.env.PORT, credentials: true }))
+///server.use(cors()); // version 0 : enabling sharing with other servers
 //loading environment variables
 dotenv.config();
 
